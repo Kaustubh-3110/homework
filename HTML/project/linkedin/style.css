@@ -1,0 +1,61 @@
+.logo {
+    display: flex;
+    margin: 20 56;
+    height: 60;
+    width: 55;
+}
+
+.btn img {
+    margin-right: 4px;
+    height: 20px;
+    width: 20px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    margin-bottom: 2px;
+    padding: 10px;
+    margin-top: 10px;
+
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+}
+
+.form-cart {
+    display: flex;
+    justify-content: center;
+
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 10px 10px rgba(0, 0, 0, .1);
+    width: 300px;
+}
+
+.forgot {
+    color: #0A66C2;
+}
+
+.btn-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+.box{
+    display: flex;
+}

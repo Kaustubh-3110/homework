@@ -1,0 +1,110 @@
+*{
+    font-family: "Inter", sans-serif;
+}
+.page{
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+}
+.contenar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 970;
+}
+.left-side{
+    display: flex;
+}
+.left-side img{
+    display: flex;
+
+}
+.right-side img {
+    margin-bottom: 30px;
+    height: 51px;
+    width: 175px;
+}
+.right-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right-side input{
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 300px;
+}
+.right-side button{
+    background-color: #4CB5F9;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    margin-top:10px;
+    width: 300px;
+}
+.cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.or-line1{
+    color: grey;
+    width: 50%;
+    margin: 0px 10px;
+}
+.line-wrapper{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.or{
+    color: rgb(121, 120, 120);
+    font-size: 14px;
+}
+.fb-login img{
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+    margin-bottom: 0px;
+}
+.fb-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2d98df;
+    font-size: 14px;
+}
+.inta-img {
+    display: flex;
+    justify-content: center;
+}
+.forgot-pass{
+    font-size: 13px;
+    font-weight: 500;
+}
+span{
+    color:#4CB5F9;
+    font-weight: 500;
+}
+.acc{
+    font-size: 14px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}
+.footer p{
+    margin: 0px 8px;
+    color: grey;
+}
+.dropdown{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 10px;
+}
