@@ -18,8 +18,8 @@ import Cartpage from './Pages/Cartpage';
 function App() {
       const [searchtext, setSearchText] = useState("");
       const [filteredProducts, setFilteredProducts] = useState(PRODUCT_DATA);
-          const [likesproducts, setLikesproducts] = useState([]);
-    const [cartproducts, setCartproducts] = useState([]);
+      const [likesproducts, setLikesproducts] = useState([]);
+      const [cartproducts, setCartproducts] = useState([]);
   
       const Searchhandlar = () => {
           if (searchtext.length === 0) {
@@ -40,10 +40,10 @@ function App() {
       setCartproducts={setCartproducts} />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<Signuppage />} />
-        <Route path="/shoppage" element={<Shoppage products={filteredProducts} />} />
+        <Route path="/shoppage" element={<Shoppage products={filteredProducts} alreadyliked={likesproducts} alreadycarted={cartproducts} likesproducts={likesproducts} setLikesproducts={setLikesproducts} cartproducts={cartproducts} setCartproducts={setCartproducts}  />} />
         <Route path="/orders" element={<Orderspage />} />
         <Route path='/contact' element={<Contactpage />} />
-        <Route path="/product" element={<Productpage products={filteredProducts} />} />
+        <Route path="/product" element={<Productpage products={filteredProducts} alreadycarted={cartproducts} alreadyliked={likesproducts} likesproducts={likesproducts} setLikesproducts={setLikesproducts} cartproducts={cartproducts} setCartproducts={setCartproducts} />} />
         <Route path="/about" element={<Aboutpage />} />
         <Route path="/wishlist" element={<Whishlistpage likesproducts={likesproducts} setLikesproducts={setLikesproducts} />} />
         <Route path="/cart" element={<Cartpage cartproducts={cartproducts} setCartproducts={setCartproducts} />} />

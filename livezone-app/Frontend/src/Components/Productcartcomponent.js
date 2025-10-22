@@ -2,9 +2,9 @@ import { useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import { IoMdCart } from "react-icons/io";
 
-export default function Productcartcomponent({ img, id, liked, carted, handlecart, handlelike, name, price, category, title, rating }) {
-    const [isliked, setIsliked] = useState(liked);
-    const [isCart, setIsCart] = useState(carted);
+export default function Productcartcomponent({ img, id, alreadyliked, alreadycarted, handlecart, handlelike, name, price, category, title, rating }) {
+    const [isliked, setIsliked] = useState(alreadyliked);
+    const [isCart, setIsCart] = useState(alreadycarted);
 
     const onLikeClick = () => {
         setIsliked(!isliked);

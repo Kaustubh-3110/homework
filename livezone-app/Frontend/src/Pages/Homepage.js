@@ -31,8 +31,8 @@ export default function Homepage({ products, likesproducts, setLikesproducts, ca
                             key={index}
                             img={item.image}
                             id={item.id}
-                            liked={likesproducts.includes(item.id)}
-                            carted={cartproducts.includes(item.id)}
+                            alreadyliked={likesproducts.includes(item.id)}
+                            alreadycarted={cartproducts.includes(item.id)}
                             name={item.name}
                             price={item.price}
                             category={item.category}
