@@ -1,18 +1,30 @@
 import { useEffect, useState } from "react";
 import Productcartcomponent from "../Components/Productcartcomponent";
+import axios from "axios";
 
 export default function Shoppage({ products, likesproducts, setLikesproducts, cartproducts, setCartproducts }) {
+    const [loading, setloading] = useState(true);
     const [category, setCategory] = useState('all');
     const [filtered, setFiltered] = useState(products);
 
     useEffect(() => {
+        axios
+            .get("http://127.0.0.1:8000/api/products/ ")
+            .then((response) => {
+                setCartproducts(response.data);
+                setloading(false);
+            })
+            .catch((error)=>{
+                console.error("Error fetching products:", error);
+                setloading(false);
+            })
         if (category === 'all') {
             setFiltered(products);
             return;
         }
         const result = products.filter(item => item.category === category);
         setFiltered(result);
-    }, [category, products]);
+    }, [category, products,loading, setCartproducts]);
 
     const handlelike = (id) => {
         if (likesproducts.includes(id)) {

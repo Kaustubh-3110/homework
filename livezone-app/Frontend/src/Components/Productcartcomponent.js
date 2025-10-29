@@ -25,7 +25,6 @@ export default function Productcartcomponent({ img, id, alreadyliked, alreadycar
                 <p>{category}</p>
                 <p>{title}</p>
                 <p>₹{price}</p>
-                <p>{rating}</p>
             </div>
         </>
     );
