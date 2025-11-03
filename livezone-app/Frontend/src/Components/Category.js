@@ -18,7 +18,7 @@ export default function Category() {
 
                     </div>
                     <div className="flex flex-col items-center">
-                        <img className="h-[50px] rounded-lg hover:scale-110 cursor-pointer " src="https://erp-image.sgliteasset.com/_next/image?url=https%3A%2F%2Fcdn1.sgliteasset.com%2FBANANALOVEWATERMELON%2Fimages%2Fproduct%2Fproduct-3936117%2FtB8liuPs660500afdb5b8_1711603887.jpg&w=3840&q=100" alt="Headset" />
+                        <img className="h-[50px] rounded-lg hover:scale-110 cursor-pointer " src="https://shop.zebronics.com/cdn/shop/files/Zeb-Havoc-pic1.jpg?v=1717221774&width=1200" alt="Headset" />
                         <p className="text-semibold hover:cursor-pointer">Headset</p>
                     </div>
                     <div className="flex flex-col items-center">

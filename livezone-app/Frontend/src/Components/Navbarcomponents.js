@@ -1,4 +1,4 @@
-import logo2 from '../assets/logo2.png';
+import logofinal from '../assets/logofinal1.png';
 import { FaSearch } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa6";
 import { IoMdCart } from "react-icons/io";
@@ -9,8 +9,8 @@ export default function Navbarcomponents({ searchtext, setSearchText, Searchhand
     return (
         <>
             <div className="flex justify-between items-center space-x-4 p-4 bg-gradient-to-r from-blue-800 to-indigo-600 text-white">
-                <div className="flex  items-center space-x-4">
-                    <img src={logo2} className="h-8" alt="Logo" />
+                <div className="flex h-[50px] items-center space-x-4">
+                    <img src={logofinal} className="h-8" alt="Logo" />
                     <p onClick={()=> navigate("/")} className='hover:scale-105  cursor-pointer motion-preset-slide-right-md'>Home</p>
                     <p onClick={()=> navigate("/login")} className='hover:scale-105 cursor-pointer motion-preset-slide-right-md'>Login</p>
                     <p onClick={()=> navigate("/signup")} className='hover:scale-105 cursor-pointer motion-preset-slide-right-md'>Sign Up</p>

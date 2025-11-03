@@ -4,14 +4,16 @@ import axios from "axios";
 
 export default function Shoppage({ products, likesproducts, setLikesproducts, cartproducts, setCartproducts }) {
     const [loading, setloading] = useState(true);
+    const [product,setProduct] = useState([]);
     const [category, setCategory] = useState('all');
     const [filtered, setFiltered] = useState(products);
 
     useEffect(() => {
         axios
-            .get("http://127.0.0.1:8000/api/products/ ")
+            .get("http://127.0.0.1:8000/api/products/")
             .then((response) => {
-                setCartproducts(response.data);
+                setProduct(response.data);
+                setFiltered(response.data);
                 setloading(false);
             })
             .catch((error)=>{

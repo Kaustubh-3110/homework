@@ -1,6 +1,25 @@
+import { useState, useEffect } from "react";
 import Productcartcomponent from "../Components/Productcartcomponent";
+import axios from "axios";
 
 export default function Productpage({ products, likesproducts, setLikesproducts, cartproducts, setCartproducts }) {
+    
+    const [loading, setloading] = useState(true);
+    const [product,setProduct] = useState([]);
+    
+    useEffect(() =>{
+        axios
+            .get("http://127.0.0.1:8000/api/products/")
+            .then((response)=>{
+                setProduct(response.data);
+                setloading(false);
+
+            })
+            .catch((error)=>{
+                console.error("Error fetching products:", error);
+                setloading(false);
+            })
+    }, []);
     const handlelike = (id) => {
         if (likesproducts.includes(id)) {
             setLikesproducts(likesproducts.filter(num => num !== id));
@@ -19,8 +38,8 @@ export default function Productpage({ products, likesproducts, setLikesproducts,
 
     return (
         <>
-            <div className="flex flex-wrap">
-                {products.map((item, index) => (
+            <div className="flex flex-wrap ">
+                {product.map((item, index) => (
                     <Productcartcomponent
                         key={index}
                         img={item.image}

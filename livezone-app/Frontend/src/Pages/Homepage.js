@@ -12,7 +12,7 @@ export default function Homepage({ likesproducts, setlikesproducts, cartproducts
   // Fetch products from Django backend
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/products/") 
+      .get("http://127.0.0.1:8000/api/products/")
       .then((response) => {
         setProducts(response.data);
         setLoading(false);
